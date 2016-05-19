@@ -1,5 +1,3 @@
-# docker build --rm --no-cache  -f files/docker/systemd/Dockerfile -t systemd /root/provision
-
 FROM xrowgmbh/systemd
 
 MAINTAINER "Björn Dieding" <bjoern@xrow.de>
