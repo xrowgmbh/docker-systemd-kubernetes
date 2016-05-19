@@ -1,5 +1,8 @@
 #!/usr/bin/env php
 <?php
+phpinfo();
+exit(1);
+json_decode( file_get_contents( "/.dockerenv" ) );
 define( "KUBE_MASTER", "192.168.255.4");
 
 $pods = file_get_contents( "http://" . KUBE_MASTER . ":8080/api/v1/pods/" );

@@ -4,7 +4,8 @@ After=etc-hosts.mount
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/env2host.php
+PassEnvironment=KUBE_MASTER
+ExecStart=/usr/bin/env /usr/bin/php -i > /var/log/test.bjoern
 RemainAfterExit=yes
 
 [Install]

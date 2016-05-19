@@ -1,0 +1,11 @@
+[Unit]
+Description=Kubernetes env to file
+After=etc-hosts.mount
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/env > /tmp/envfile
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
